@@ -22,5 +22,4 @@ cask "protonvpn"
 cask "sync"
 mas "Antivirus Zap - Virus Scanner", id: 1212019923
 mas "Graphic", id: 404705039
-mas "Jayson", id: 1468691718
 mas "Xcode", id: 497799835

@@ -35,7 +35,7 @@ Plug 'hrsh7th/cmp-path' " Engine source
 " Plugins become visible to Vim after this call.
 call plug#end()
 
-" set noshowmode " remove -- INSERT -- (unnecessary due to status line)
+set noshowmode " remove -- INSERT -- (unnecessary due to status line)
 set number " Turns on line numbering
 set relativenumber " Turns on relative line numbering
 set splitbelow " To open completion previews below
@@ -50,10 +50,6 @@ set expandtab " pressing 'tab' inserts n=*tabstop* spaces
 set textwidth=0 " Prevent new lines being triggered at character limit
 set colorcolumn=80 " Add visual cue for ideal character limit
 
-" File browsing
-" nnoremap <leader>n :NERDTreeFocus<CR> " Focus on Nerdtree
-" nnoremap <leader>t :NERDTreeToggle<CR> " For hiding 
-
 " Jump to start and end of line using the home row keys
 map H ^
 map L $
@@ -67,32 +63,9 @@ nnoremap k gk
 let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
 
-" Status line colourscheme (separate to overall colourscheme)
-" let g:lightline = {
-"     \ 'colorscheme': 'wombat',
-"     \ 'active': {
-"     \ 'left': [ [ 'mode', 'paste' ],
-"     \             [ 'readonly', 'filename', 'modified' ] ],
-"     \   'right': [ [ 'lineinfo' ],
-"     \              [ 'percent' ],
-"     \              [ 'fileencoding', 'filetype' ] ],
-"     \ },
-"     \ 'component_function': {
-"     \   'filename': 'LightlineFilename'
-"     \ },
-"     \ }
-" function! LightlineFilename()
-"   return expand('%:t') !=# '' ? @% : '[No Name]'
-" endfunction
-
 " Line visibility for more context
 set scrolloff=3
 set cmdheight=2
-
-" Code folding
-" set foldmethod=syntax  =indent  Use 'za' on indented line to toggle
-" set foldcolumn=2 " Shows lines with folds
-" let g:xml_syntax_folding=1
 
 " Printing options: (:hardcopy (:ha) > 'fileout.ps' to print to file)
 set printoptions=number:y " Add line numbers to output
