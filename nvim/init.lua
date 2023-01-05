@@ -43,17 +43,15 @@ require('packer').startup(function(use)
     after = 'nvim-treesitter',
   }
 
-  use {
-	  "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-  }
+  -- Automatically close brackets, parentheses etc. 
+  use "windwp/nvim-autopairs"
 
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
 
-  -- use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+  -- Colour theme
   use 'https://gitlab.com/__tpb/monokai-pro.nvim'
 
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
@@ -175,6 +173,9 @@ require('lualine').setup {
 
 vim.g.monokaipro_filter = 'spectrum'
 
+require("nvim-autopairs").setup({
+    disable_filetype = { "TelescopePrompt" },
+})
 
 -- Enable Comment.nvim
 require('Comment').setup()
